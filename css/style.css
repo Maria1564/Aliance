@@ -3,8 +3,8 @@
 }
 
 @font-face {
-    font-family: 'Bebas Neue Regular';
-    src: url('../fonts/BebasNeueRegular.woff') format('woff');
+    font-family: 'Bebas Neue';
+    src: url('../fonts/BebasNeueBook.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -122,8 +122,7 @@ body {
 
 .header-title {
     max-width: 1080px;
-    font-family: 'Bebas Neue Regular';
-    font-weight: 400;
+    font-family: 'Bebas Neue';
     font-size: 80px;
     line-height: 120%;
     margin: 30px 0;
@@ -164,4 +163,85 @@ body {
     font-size: 16px;
     line-height: 160%;
     margin: 0;
+}
+
+section {
+    margin: 150px 0;
+}
+
+section > .container {
+    max-width: 1410px
+}
+
+.section-title {
+    font-family: 'Bebas Neue';
+    font-size: 60px;
+    line-height: 120%;
+    color: #292D33;
+}
+
+.steps {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 30px;
+}
+
+.steps-item {
+    max-width: 330px;
+    padding-right: 30px;
+}
+
+.steps-num {
+    font-family: 'Bebas Neue';
+    font-size: 48px;
+    line-height: 120%;
+    color: #5C8EE6;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.steps-num::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background: #EBEBF0;
+    display: inline-block;
+}
+
+.steps-title {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 160%;
+    color: #292D33;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.steps-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #828A99;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.steps-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 160%;
+    color: #5C8EE6;
+}
+
+.steps-link::before {
+    content: "";
+    width: 40px;
+    height: 1px;
+    background: #5C8EE6;
 }
