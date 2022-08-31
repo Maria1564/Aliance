@@ -55,6 +55,16 @@ body {
     top: 0;
     width: 100%;
     border-bottom: 1px solid rgba(235, 235, 240, 0.2); 
+    transition: background 0.5s,  color 0.2s;
+}
+
+.navbar-light {
+    background: white;
+    color: #292D33;
+}
+
+.navbar-light .header-logo-path {   /* стиль к селектору .header-logo-path(класс у логотипа) используетя, когда есть класс navbar-light*/
+    fill: #292D33;  
 }
 
 .header-logo {
