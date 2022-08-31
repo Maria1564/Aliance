@@ -21,6 +21,7 @@ body {
 
 
 .header {
+    padding-top: 94px;
     min-height: 100vh;
 }
 
@@ -48,8 +49,11 @@ body {
     align-items: center;
     color: white;
     height: 94px;
-    position: relative;
-    z-index: 1;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
     border-bottom: 1px solid rgba(235, 235, 240, 0.2); 
 }
 
