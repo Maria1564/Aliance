@@ -55,20 +55,23 @@ body {
     top: 0;
     width: 100%;
     border-bottom: 1px solid rgba(235, 235, 240, 0.2); 
-    transition: background 0.5s,  color 0.2s;
+    transition: background-color 0.5s,  color 0.2s, height 0.5s;
 }
 
 .navbar-light {
-    background: white;
+    background-color: white;
     color: #292D33;
+    height: 74px;
 }
 
-.navbar-light .header-logo-path {   /* стиль к селектору .header-logo-path(класс у логотипа) используетя, когда есть класс navbar-light*/
+/* .navbar-light .header-logo-path {   стиль к селектору .header-logo-path(класс у логотипа) используетя, когда есть класс navbar-light
     fill: #292D33;  
-}
+} */
 
 .header-logo {
-    padding: 25px 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
     border-right: 1px solid rgba(235, 235, 240, 0.2); 
     height: 100%;
 }
