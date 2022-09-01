@@ -119,6 +119,8 @@ body {
 }
 
 .navbar-btn {
+    display: flex;
+    align-items: center;
     height: 100%;
     padding: 35px 50px;
     flex-shrink: 0;
