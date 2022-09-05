@@ -305,3 +305,9 @@ section {
         font-size: 11px;
     }
 }
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 10px;
+    }
+}
