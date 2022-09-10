@@ -25,7 +25,6 @@ body {
 
 .header {
     padding-top: 5.875rem;
-    min-height: 100vh;
 }
 
 .header-image {
@@ -187,7 +186,6 @@ body {
    width: 100%;
    padding: 0;
    margin-top: 6.25rem;
-   margin-bottom: 0;
    list-style: none;
    color: #ffffff;
    position: relative;
@@ -196,13 +194,52 @@ body {
 
 .header-features-item{
     width: 18.5625rem;
+    min-height: 100%;
     padding: 1.875rem 3.125rem;
-    border:1px solid rgba(235, 235, 240, 0.2);
+    border: 1px solid rgba(235, 235, 240, 0.2);
 }
 
-.header-features-item:not(:last-child) {
-    border-right: none;
+.slider-buttons {
+    display: none;
+    height: 44px;
 }
+
+.slider-button-prev,
+.slider-button-next {
+    height: 100%;
+    flex-basis: 50%;
+    border: 1px solid rgba(235, 235, 240, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.slider-buttons-steps {
+    height: 40px;
+    margin-top: 1.875rem;
+
+}
+.slider-buttons-wrapper_steps {
+    display: none;
+    height: 100%;
+    width: 120px;
+    margin-top: 1.875rem;
+    
+}
+
+
+.slider-buttons-wrapper_steps .slider-button-prev_step,
+.slider-buttons-wrapper_steps .slider-button-next_step{
+    background: #5C8EE5;
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
 
 .header-features-text {
     font-weight: 400;
@@ -211,6 +248,8 @@ body {
     margin: 0;
     margin-top: 1.0625rem;
 }
+
+
 
 section {
     margin: 9.25rem 0;
@@ -235,6 +274,8 @@ section {
 .steps-item {
     max-width: 20.625rem;
     padding-right: 1.875rem;
+    flex-grow: 1;
+    min-height: 100%;
 }
 
 .steps-num {
@@ -343,6 +384,21 @@ section {
     .navbar-btn {
         padding-left: 2rem;
         padding-right: 2rem;
+    }
+
+    .slider-buttons {
+        display: flex;
+    }
+}
+
+@media (max-width: 1100px) {
+    .slider-buttons-steps {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .slider-buttons-wrapper_steps {
+        display: flex;
     }
 }
 
@@ -456,8 +512,6 @@ section {
         margin-bottom: 0.8rem;
     }
 
-    
-
     .mobile-phone {
         display: block;
         font-weight: 600;
@@ -512,3 +566,45 @@ section {
     }
 }
 
+@media (max-width:768px) {
+    .container {
+        max-width: 40rem;
+    }
+
+    .header-title {
+        font-size: 4rem;
+    }
+
+    .header-content {
+        padding-top: 3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    /* 
+    .navbar {
+        height: 5.6rem;
+    }
+
+    .mobile-menu-toggle {
+        padding: 2rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    .mobile-menu-line {
+        height: 1.5px;
+    } */
+
+    .container {
+        max-width: 92%;
+    }
+
+    .header-title {
+        font-size: 2rem;
+    }
+
+    .header-content {
+        padding-top: 2rem;
+    }
+}
