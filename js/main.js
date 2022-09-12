@@ -1,18 +1,22 @@
 const navbar = document.querySelector(".navbar");
-const logo = document.querySelector(".logo-svg use"); //обращение через класс .logo-svg к тегу svg (который внутри этого класса)
+const logoLight = document.querySelector(".logo-light"); 
+const logo = document.querySelector(".logo"); 
 const mMenuToggle = document.querySelector(".mobile-menu-toggle")
 const menu = document.querySelector(".mobile-menu")
 
 //Включает светлый режим меню
 const lightModeOn = (event)=>{
    navbar.classList.add("navbar-light"); //Добавляет класс под название navbar-light
-   logo.href.baseVal = "./img/sprite.svg#logo"
+   logo.style.display = "block";
+   logoLight.style.display = "none";
 }
 
 //Выключает светлый режим меню
 const lightModeOff = (event)=>{
    navbar.classList.remove("navbar-light");
-   logo.href.baseVal = "./img/sprite.svg#logo-light"
+   logo.style.display = "none";
+   logoLight.style.display = "block";
+
 }
 
 //Функция открывания меню

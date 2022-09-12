@@ -253,7 +253,7 @@ body {
 
 section {
     margin: 9.25rem 0;
-    overflow-x: hidden;
+    display: none;
 }
 
 
@@ -350,6 +350,10 @@ section {
 
     .header-logo {
         padding: 2rem;
+    }
+
+    .logo {
+        display: none;
     }
 
     .logo-svg {
