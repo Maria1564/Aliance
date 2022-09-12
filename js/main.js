@@ -79,11 +79,11 @@ const swiper = new Swiper('.swiper', {
       prevEl: '.slider-button-prev_step',
     },
     breakpoints: {
-      // when window width is >= 576px
+ 
     300: {
         slidesPerView: 2,
       },
-      // when window width is >= 768px
+   
       760: {
          slidesPerView: 3,
       },
