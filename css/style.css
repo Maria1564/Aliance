@@ -337,6 +337,11 @@ section {
     width: 2.5rem;
     height: 1px;
     background: #5C8EE6;
+    transition: width 0.2s;
+}
+
+.steps-link:hover::before {
+    width: 3.75rem;
 }
 
 .steps-buttons {
@@ -365,6 +370,16 @@ section {
     flex-basis: 33%;
     border: 1px solid #EBEBF0;
     position: relative;
+    text-decoration: none;
+    transition: border 0.2s;
+}
+
+.card:hover .card-title {
+    color: #5C8EE6;
+}
+
+.card:hover {
+    border-color: #5C8EE6;
 }
 
 .card-content {
@@ -378,6 +393,7 @@ section {
     color: #292D33;
     margin-top: 0;
     margin-bottom: 0.625rem;
+    transition: color 0.4s;
 }
 
 .card-text {
@@ -393,7 +409,7 @@ section {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 100%;
+    width: 90%;
     z-index: -1;
 }
 
