@@ -445,7 +445,7 @@ section {
     color: #828A99;
     width: 22.5rem;
     margin: 0;
-    margin-top: 10px;
+    margin-top: .625rem;
 }
 
 .trade-icon {
@@ -473,6 +473,11 @@ section {
     .header-image {
         background-position: center;
     }
+
+    .card-trade {
+        width: 18.75rem;
+    }
+
 }
 
 @media (max-width: 1500px) {
@@ -534,6 +539,15 @@ section {
     .card {
         flex-basis: 50%;
     }
+
+    .card-trade {
+        flex-basis: 80%;
+    } 
+    
+    .card-trade-content {
+        margin-left: 6rem;
+    }
+    
 }
 
 
@@ -699,6 +713,14 @@ section {
     .close-menu  .mobile-menu-line:nth-child(3) {
         transform: rotate(-45deg) translateY(-9px);
     }
+
+    .card-trade {
+        flex-basis: 100%;
+    }  
+
+    .card-trade-content {
+        margin-left: 8.5rem;
+    }
 }
 
 @media (max-width:768px) {
@@ -717,6 +739,15 @@ section {
     .card {
         flex-basis: 100%;
     }
+
+    .card-trade {
+        width: 95%;
+    }
+
+    .card-trade-content {
+        margin-left: 1.5rem;
+    }
+    
 }
 
 @media (max-width: 576px) {
@@ -746,4 +777,42 @@ section {
     .header-content {
         padding-top: 2rem;
     }
+
+    .card-trade {
+        position: relative;
+        width: 98%;
+        padding: 2.5rem;
+        padding-bottom: 11.5rem;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .trade-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .card-trade-content {
+        display: flex;
+        margin-left: 2.5rem;
+        width: 13rem;
+
+    }
+
+    .card-trade-title {
+        font-size: 1.7rem;
+        line-height: 130%;
+    }
+
+    .card-trade-text {
+        position: absolute;
+        bottom: 31px;
+        right: 30px;
+        line-height: 160%;
+    }
+
+    .section-title span {
+        display: none;
+    }
+    
 }
