@@ -194,7 +194,7 @@ body {
     font-size: 5rem;
     line-height: 121%;
     margin: 1.3125rem 0 2.4375rem;
-    letter-spacing: 0.8px;
+    letter-spacing: .8px;
     word-spacing: -2px;
 }
 
@@ -269,7 +269,7 @@ section {
     line-height: 120%;
     color: #292D33;
     margin-top: 1.5rem;
-    letter-spacing: 0.4px;
+    letter-spacing: .4px;
     margin-bottom: 4rem;
 }
 
@@ -417,7 +417,7 @@ section {
     color: #828A99;
     width: 19.375rem;
     margin-bottom: 14.625rem;
-    margin-top: 0.7rem;
+    margin-top: .7rem;
 }
 
 .card-img {
@@ -544,7 +544,7 @@ section {
     }
 
     .navbar {
-        height: 5rem;
+        height: 5.7rem;
     }  
     
     .navbar-btn {
@@ -571,6 +571,18 @@ section {
     .card-trade-content {
         margin-left: 6rem;
     }
+
+    .header-features {
+        margin-bottom: 0;
+        margin-top: 4.2rem;
+    }
+
+    .header-features-item {
+        padding-top: 1.4rem;
+        padding-left: 2.4rem;
+        width: 250px;
+    }
+
     
 }
 
@@ -593,13 +605,17 @@ section {
         justify-content: center;
     }
 
+    .logo-svg {
+        max-width: 10rem;
+    }
+
     .mobile-menu-toggle {
         width: 80px;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 1.8rem;
+        padding: 2.3rem 2.4rem;
         border-right: 1px solid rgba(235, 235, 240, 0.2); 
     }
 
@@ -616,6 +632,11 @@ section {
 
     .mobile-menu-line:nth-child(2) {
         width: 80%;
+    }
+
+    .navbar-btn {
+        padding-left: 2.3rem;
+        padding-right: 2.3rem;
     }
 
     .navbar-btn .btn-text {
@@ -682,7 +703,7 @@ section {
     }
 
     .mobile-submenu-item:not(:last-child) {
-        margin-bottom: 0.8rem;
+        margin-bottom: .8rem;
     }
 
     .mobile-phone {
@@ -700,7 +721,7 @@ section {
     .mobile-info {
         display: flex;
         align-items: center;
-        gap: 0.8rem;
+        gap: .8rem;
         margin-bottom: 1rem;
     }
 
@@ -745,9 +766,21 @@ section {
     .card-trade-content {
         margin-left: 8.5rem;
     }
+
+    .steps-num {
+        font-size: 4rem;
+    }
+
+    .header-features-text {
+        font-size: 1.17rem;
+        width: 14.875rem;
+        margin-top: 1.6rem;
+    }
 }
 
 @media (max-width:768px) {
+
+    
     .container {
         max-width: 40rem;
     }
@@ -757,7 +790,7 @@ section {
     }
 
     .header-content {
-        padding-top: 3rem;
+        padding-top: 4rem;
     }
 
     .card {
@@ -771,47 +804,120 @@ section {
     .card-trade-content {
         margin-left: 1.5rem;
     }
+
+    .header-content .btn {
+        font-size: 1.17rem;
+        padding: 1.7rem 7rem;
+        padding-left: 7.3rem;
+    }
+    
+    
+   
     
 }
 
 @media (max-width: 576px) {
-    /* 
-    .navbar {
-        height: 5.6rem;
+
+    .header-text {
+        max-width: 31.3rem;
+        font-size: 1.17rem;
+        line-height: 159%;
+        margin-bottom: 2.3rem;
+    }
+    .header-title {
+        margin-bottom: 1rem;
     }
 
-    .mobile-menu-toggle {
-        padding: 2rem;
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
+    .seporator {
+        width: 8.4rem;
     }
 
-    .mobile-menu-line {
-        height: 1.5px;
-    } */
+    .section-light {
+        margin-top: 8.4rem;
+    }
+
+
+    .section-title {
+      font-size: 2.98rem;
+    }
+
+    .section-light .section-title {
+        margin-bottom: 2.4rem;
+    }
+
+    .steps-title {
+        font-size: 1.67rem;
+        margin-top: 1rem;
+        margin-bottom: .6rem
+     
+    }
+    
+    .steps-text {
+        width: 21.5625rem;
+        font-size: 1.14rem;
+        margin-bottom: 2.1rem;
+    }
+
+    .steps-item {
+        max-width: 25.6em;
+    }
+
+    .steps-link {
+        font-size: 1.17rem;
+        gap: 1.6rem;
+    }
+
+    .steps-link::before {
+        width: 3.3rem;
+    }
+
+    .steps {
+        margin-bottom: -0.2rem;
+    }
+
+    .production {
+        margin-top: 8.3rem;
+    }
+
+    .production .section-title,
+    .trademarks .section-title {
+        margin-bottom: 2.7rem;
+    }
+    .card {
+        min-height: 412px;
+    }
+
+    .card-content {
+        padding:1.5rem 2.4rem 2.5rem 2.3rem;
+    }
+
+    .card-title {
+        font-size: 1.67rem;
+    }
+
+    .card-text {
+        font-size: 1.17rem;
+        width: 23.75rem;
+    }
+
+    .trademarks {
+        margin-top: 8.4rem;
+    }
 
     .container {
         max-width: 92%;
     }
 
-    .header-title {
-        font-size: 2rem;
-    }
-
-    .header-content {
-        padding-top: 2rem;
-    }
-
     .card-trade {
         position: relative;
         width: 98%;
-        padding: 2.5rem;
-        padding-bottom: 11.5rem;
+        padding: 2.4rem 2.5rem 11.5rem 2.5rem;
         display: flex;
         align-items: flex-start;
     }
 
     .trade-icon {
+        margin-top: 0;
         width: 100px;
         height: 100px;
     }
@@ -830,13 +936,17 @@ section {
 
     .card-trade-text {
         position: absolute;
-        bottom: 31px;
+        bottom: 22px;
         right: 30px;
         line-height: 160%;
+        font-size: 1.17rem;
+        width: 23.67rem;
     }
 
     .section-title span {
         display: none;
     }
+
+
     
 }
