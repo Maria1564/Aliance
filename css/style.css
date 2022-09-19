@@ -428,65 +428,75 @@ section {
     z-index: -1;
 }
  
-
-.trademarks{
-    margin-top: 9.1rem;
+.trademark {
+    margin-bottom: 50px;
+    margin-top: 9.6rem;
 }
 
-.card-trade {
+.trademark .section-title {
+    font-size: 3.78rem;
+    margin-bottom: 3.7rem;
+    margin-top: 1.81rem;
+}
+
+.trademark-cards {
     display: flex;
-    align-items: center;
+}
+
+.trademark-card {
     flex-basis: 50%;
     border: 1px solid #EBEBF0;
     text-decoration: none;
-    padding: 3.0625rem;
-    padding-bottom: 2.9rem;
-    padding-top: 1.875rem;
-    transition: border-color 0.2s;
+    transition: border 0.2s;
+    padding: 3rem;
+    padding-right: 3.6rem;
+    padding-top: 2.5rem;
+    display: grid;
+    grid-template-columns: 180px 1fr ;
+    grid-template-rows: auto 2fr;
+    grid-column-gap: 3.125rem;
+    grid-template-areas: 
+    "logo title title"
+    "logo text text";
 }
 
-.card-trade-content {
-    width: 24.375rem;
-    margin-left: 3.125rem;
-    
+.trademark-card-logo {
+    height: 180px;
+    width: 100%;
+    grid-area: logo;
+    fill: #828A99;
+    transition: fill 0.5s;
 }
 
-.card-trade-title {
+.trademark-card-title {
+    grid-area: title;
+    margin: 0;
     font-weight: 400;
     font-size: 1.75rem;
     line-height: 160%;
     color: #292D33;
-    margin: 0;
-    transition: color 0.4s;
+    transition: color 0.5s;
 }
 
-.card-trade-text {
+.trademark-card-text {
+    grid-area: text;
     font-weight: 400;
     font-size: 1rem;
     line-height: 160%;
     color: #828A99;
-    width: 22.5rem;
-    margin: 0;
-    margin-top: .625rem;
-    padding-bottom: .4375rem;
+    margin-top: 0.625rem;
 }
 
-.trade-icon {
-    fill: #828A99;
-    transition: fill 0.2s;
-    margin-top: 12px;
+.trademark-card:hover {
+    border-color: #5C8EE6;
 }
 
-.card-trade:hover {
-    border-color: #5C8EE5;
+.trademark-card:hover .trademark-card-logo {
+    fill: #5C8EE6;
 }
 
-.card-trade:hover .card-trade-title {
-    color: #5C8EE5;
-}
-
-.card-trade:hover .trade-icon {
-    fill: #5C8EE5;
+.trademark-card:hover .trademark-card-title {
+    color: #5C8EE6;
 }
 
 @media (max-width: 1700px) {
@@ -498,9 +508,9 @@ section {
         background-position: center;
     }
 
-    .card-trade {
+    /* .card-trade {
         width: 18.75rem;
-    }
+    } */
 
 }
 
@@ -564,14 +574,6 @@ section {
         flex-basis: 50%;
     }
 
-    .card-trade {
-        flex-basis: 80%;
-    } 
-    
-    .card-trade-content {
-        margin-left: 6rem;
-    }
-
     .header-features {
         margin-bottom: 0;
         margin-top: 4.2rem;
@@ -583,6 +585,9 @@ section {
         width: 250px;
     }
 
+    .trademark-card {
+        grid-template-columns: auto auto;
+    }
     
 }
 
@@ -759,14 +764,6 @@ section {
         transform: rotate(-45deg) translateY(-9px);
     }
 
-    .card-trade {
-        flex-basis: 100%;
-    }  
-
-    .card-trade-content {
-        margin-left: 8.5rem;
-    }
-
     .steps-num {
         font-size: 4rem;
     }
@@ -775,6 +772,10 @@ section {
         font-size: 1.17rem;
         width: 14.875rem;
         margin-top: 1.6rem;
+    }
+
+    .trademark-cards {
+        flex-direction: column;
     }
 }
 
@@ -900,53 +901,45 @@ section {
         width: 23.75rem;
     }
 
-    .trademarks {
-        margin-top: 8.4rem;
-    }
-
     .container {
         max-width: 92%;
     }
 
-    .card-trade {
-        position: relative;
-        width: 98%;
-        padding: 2.4rem 2.5rem 11.5rem 2.5rem;
-        display: flex;
-        align-items: flex-start;
-    }
-
-    .trade-icon {
-        margin-top: 0;
-        width: 100px;
-        height: 100px;
-    }
-
-    .card-trade-content {
-        display: flex;
-        margin-left: 2.5rem;
-        width: 13rem;
-
-    }
-
-    .card-trade-title {
-        font-size: 1.7rem;
-        line-height: 130%;
-    }
-
-    .card-trade-text {
-        position: absolute;
-        bottom: 22px;
-        right: 30px;
-        line-height: 160%;
-        font-size: 1.17rem;
-        width: 23.67rem;
+    .trademark {
+        margin-top: 9.9rem;
     }
 
     .section-title span {
         display: none;
     }
+    .trademark .section-title{
+        margin-bottom: 2.6rem;
+        font-size: 2.98rem;
+        margin-top: 1.6rem;
+    }
 
+    .trademark-card {
+        grid-template-areas: 
+        "logo title"
+        "text text";
+        grid-template-columns: 100px auto;
+        padding: 2.3rem;
+        grid-column-gap: 31px;
+    }
 
+    .trademark-card-logo {
+        width: 100px;
+        height: 107px;
+    }
+
+    .trademark-card-title {
+        font-size: 1.68rem;
+        line-height: 143%;
+    }
     
+    .trademark-card-text {
+        font-size: 1.17rem;
+        margin-top: 1.3rem;
+        margin-bottom: 0;
+    }
 }
