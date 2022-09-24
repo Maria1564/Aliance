@@ -596,18 +596,20 @@ section {
     align-items: center;
     justify-content: center;
     padding: 2.4rem 5rem 3rem 3rem;
+    filter: grayscale(100%);
+    transition: filter 0.5s;
 }
 
 .clients-logo {
     max-width: 100%;
     width: 70px;
     height: 70px;
-    filter: grayscale();
-    transition: filter 0.5s;
+    
 }
 
-.clients-logo:hover {
-    filter: inherit;
+.clients-logo-item:hover {
+    filter: grayscale(0%);
+
 }
 @media (max-width: 1700px) {
     html {
