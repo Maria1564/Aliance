@@ -108,7 +108,7 @@ const swiper = new Swiper('.features-slider', {
   
       768: {
         slidesPerView: 2,
-      },
-      
+
+      }
     }
  });
