@@ -1059,6 +1059,9 @@ section {
 }
 
 @media (max-width: 576px) {
+    .header {
+        height: 955px;
+    }
 
     .header-text {
         max-width: 31.3rem;
@@ -1130,8 +1133,27 @@ section {
     }
 
     .card-content {
-        padding:1.5rem 2.4rem 2.5rem 2.3rem;
+        padding: 1.6rem 2.4rem 10.7rem 2.3rem;
     }
+
+    a:nth-child(2) .card-content {
+        padding-bottom: 8.8rem;
+    }
+
+    a:nth-child(4) .card-content {
+        padding-top: 1.2rem;
+    }
+
+    a:nth-child(5) .card-content {
+        padding-bottom: 12.64rem;
+    }
+
+    a:nth-child(6) .card-content {
+        padding-bottom: 9rem;
+    }
+    /* .card-content:nth-child(2) {
+        padding: 2.5rem 2.4rem 9rem 2.3rem;
+    } */
 
     .card-title {
         font-size: 1.67rem;
@@ -1147,7 +1169,7 @@ section {
     }
 
     .trademark {
-        margin-top: 9.9rem;
+        margin-top: 8.12rem;
     }
 
     .section-title span {
@@ -1180,7 +1202,7 @@ section {
     
     .trademark-card-text {
         font-size: 1.17rem;
-        margin-top: 1.3rem;
+        margin-top: 1.2rem;
         margin-bottom: 0;
     }
 
@@ -1268,18 +1290,23 @@ section {
         top: -8px;
     } 
 
+    .blog {
+        margin-top: 8.26rem;
+    }
+
     .blog-card-text {
         display: none;
     }
 
     .blog-card {
-        min-height: 16.2rem;
+        min-height: 16.5rem;
         padding: 8.2rem 2rem 0.8rem 1.6rem;
     }
 
     .blog-card-title {
         font-size: 1.676rem;
         line-height: 1.2;
+        margin-bottom: 0.8rem;
     }
 
     .blog .section-title{
@@ -1287,7 +1314,7 @@ section {
     } 
  
     .blog-slider-footer {
-        margin-top: 1.8rem;
+        margin-top: 1.6rem;
     }
 
     
