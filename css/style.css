@@ -687,6 +687,133 @@ section {
     margin-top: 1.875rem;
 }
 
+.calltoaction {
+    margin-top: 11.1875rem;
+}
+
+.bg-gray {
+    background: #F0F2F5;
+}
+
+.section-cta {
+    position: relative;
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+}
+
+.cta-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 45rem;
+    width: 50%;
+}
+
+.cta-form-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cta-form {
+    max-width: 52.5rem;
+}
+
+.cta-form-title {
+    margin: 0;
+}
+
+.cta-form-text {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 160%;
+    color: #828A99;
+    margin-top: 1.375rem;
+    margin-bottom: 2.625rem;
+    max-width: 40rem;
+}
+
+.input-group-wrapper {
+    display: flex;
+    gap: 1.875rem;
+}
+
+.input-group {
+    position: relative;
+    height: 4.125rem;
+    flex-grow: 1;
+    background: #F0F2F5;
+}
+
+.input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1.25rem 1.875rem;
+    border: 1px solid #E4E4EB;
+    background: transparent;
+
+}
+
+.input-group-label {
+    position: absolute;
+    cursor: text;
+    top: 1.5rem;
+    left: 1.975rem;
+    font-weight: 400;
+    font-size: 16px;
+    color: #828A99;
+    transition: top 0.2s, left 0.2s, font-size 0.2s;
+}
+
+
+.input:focus {
+    outline: none;
+    border: 1px solid #5C8EE5;
+
+}
+
+.input:focus ~ .input-group-label,  /* ~ - рядом стоящийй компонент */
+.input:not(:placeholder-shown).input:not(:focus) ~ .input-group-label {  
+    top: -0.5rem;
+    left: 1.25rem;
+    font-size: .625rem;
+    background: inherit;
+    padding: 0 10px;
+}
+
+.cta-form-footer {
+    display: flex;
+    margin-top: 1.875rem;
+    gap: 1.875rem;
+    align-items:center;
+    
+}
+
+.cta-form-btn {
+    flex-shrink: 0;
+}
+
+.notify {
+    display: flex;
+    align-items: start;
+    gap: .625rem;
+}
+
+.notify-icon{
+    flex-shrink: 0;
+}
+
+.notify-text {
+    max-width: 23.75rem;
+    margin-top: 0;
+    font-weight: 400;
+    font-size: .75rem;
+    line-height: 160%;
+    color: #828A99;
+}
+
 @media (max-width: 1700px) {
     html {
         font-size: 14px;
@@ -808,6 +935,10 @@ section {
 
     .founder-content .section-title {
         padding-right: 0;
+    }
+
+    .cta-image {
+        width: 36%;
     }
     
 }
@@ -1006,6 +1137,15 @@ section {
     .founder-content {
         padding-left: 2rem;
     }
+
+    .cta-form-wrapper {
+        justify-content: center;
+    }
+    
+    .cta-image {
+        display: none;
+    }
+    
    
 }
 
@@ -1317,5 +1457,37 @@ section {
         margin-top: 1.6rem;
     }
 
+    .section-cta {
+        padding: 4.17rem 0;
+    }
+
+    .cta-form-wrapper {
+        margin: 0 .9375rem;
+    }
+
+    .input-group-wrapper {
+        flex-direction: column;
+    }
     
+    .cta-form-footer {
+        flex-direction: column;
+    }
+
+    .cta-form-btn {
+       width: 100%;
+    }
+
+    .cta-form-text {
+        font-size: 1.176rem;
+    }
+
+    .notify {
+        width: 100%;
+    }
+
+    .notify-text {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 160%;
+    }
 }
