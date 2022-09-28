@@ -1466,32 +1466,67 @@ section {
         margin-top: 1.6rem;
     }
 
-    .section-cta {
-        padding: 4.17rem 0;
+    .calltoaction {
+        margin-top: 8.4rem;
     }
 
+    .section-cta {
+        padding: 3.9rem 0;
+        padding-bottom: 3rem;
+    }
+
+    .section-cta .section-title {
+        letter-spacing: .2px;
+    }
+    
+    
+
     .cta-form-wrapper {
-        margin: 0 .9375rem;
+        margin: 0 1.2rem;
     }
 
     .input-group-wrapper {
         flex-direction: column;
+        gap: 1.6rem;
+    }
+
+    .input-group {
+        height: 5.167rem;
+        width: 100%;
+    }
+
+    .input-group:nth-child(1) {
+        width: 100%;
     }
     
     .cta-form-footer {
         flex-direction: column;
+        margin-top: 0.8rem;
+        gap: 2.67rem;
     }
 
     .cta-form-btn {
        width: 100%;
+       font-size: 1.167rem;
+       padding-top: 1.7rem;
+       padding-bottom: 1.7rem;
     }
 
     .cta-form-text {
-        font-size: 1.176rem;
+        font-size: 1.167rem;
+        margin-top: 1rem;
+        margin-bottom: 2.4rem;
+    }
+
+    .input-group-label {
+ 
+        top: 1.7rem;
+        left: 2.4rem;
     }
 
     .notify {
         width: 100%;
+        gap: 0.9rem;
     }
 
     .notify-text {
@@ -1499,4 +1534,12 @@ section {
         font-size: 12px;
         line-height: 160%;
     }
+
+    .input:focus ~ .input-group-label,  /* ~ - рядом стоящийй компонент */
+.input:not(:placeholder-shown).input:not(:focus) ~ .input-group-label {  
+    top: -0.4rem;
+    left: 1.7rem;
+    font-size: .83rem;
+ 
+}
 }
