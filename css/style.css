@@ -866,6 +866,9 @@ section {
     .header-phone {
         margin-right: 2rem;
     }
+    .cta-image {
+        width: 40%;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -947,7 +950,7 @@ section {
     }
 
     .cta-image {
-        width: 36%;
+        width: 30%;
     }
     
 }
@@ -1203,6 +1206,10 @@ section {
 
     .founder-content {
         padding-left: 0;
+    }
+
+    .input-group-wrapper {
+        flex-direction: column;
     }
   
 }
