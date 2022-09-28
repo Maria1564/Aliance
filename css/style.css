@@ -412,9 +412,7 @@ section {
 }
 
 .card-content {
-    padding: 2.1rem 0  2.5rem 3.125rem;
-
-
+    padding: 2.3rem 0  2.5rem 3.125rem;
     /* width: 100%; */
 }
 
@@ -688,7 +686,7 @@ section {
 }
 
 .calltoaction {
-    margin-top: 11.1875rem;
+    margin-top: 13.6rem;
 }
 
 .bg-gray {
@@ -712,10 +710,12 @@ section {
 .cta-form-wrapper {
     display: flex;
     justify-content: flex-end;
+    
 }
 
 .cta-form {
     max-width: 52.5rem;
+    /* padding-right: 8.7rem; */
 }
 
 .cta-form-title {
@@ -727,9 +727,10 @@ section {
     font-size: 1rem;
     line-height: 160%;
     color: #828A99;
-    margin-top: 1.375rem;
-    margin-bottom: 2.625rem;
+    margin-top: 1.6rem;
+    margin-bottom: 3.2rem;
     max-width: 40rem;
+    
 }
 
 .input-group-wrapper {
@@ -742,6 +743,12 @@ section {
     height: 4.125rem;
     flex-grow: 1;
     background: #F0F2F5;
+    width: 25.3125rem;
+    
+}
+
+.input-group:nth-child(1) {
+    width: 25.6rem;
 }
 
 .input {
@@ -776,8 +783,8 @@ section {
 
 .input:focus ~ .input-group-label,  /* ~ - рядом стоящийй компонент */
 .input:not(:placeholder-shown).input:not(:focus) ~ .input-group-label {  
-    top: -0.5rem;
-    left: 1.25rem;
+    top: -0.2rem;
+    left: 1.2rem;
     font-size: .625rem;
     background: inherit;
     padding: 0 10px;
@@ -787,12 +794,14 @@ section {
     display: flex;
     margin-top: 1.875rem;
     gap: 1.875rem;
-    align-items:center;
+    align-items: flex-end;
     
 }
 
 .cta-form-btn {
     flex-shrink: 0;
+    padding: 1.25rem 3.23rem;
+    font-size: .875rem;
 }
 
 .notify {
