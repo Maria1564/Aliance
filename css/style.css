@@ -176,7 +176,7 @@ body {
 }
 
 .header-content {
-    padding-top: 9.375rem;
+    padding-top: 9.3rem;
     position: relative;
     z-index: 1;
     color: white;
@@ -212,6 +212,7 @@ body {
    width: 100%;
    padding: 0;
    margin-top: 6.25rem;
+   margin-bottom: 0;
    list-style: none;
    color: #ffffff;
    position: relative;
@@ -264,6 +265,7 @@ section {
 
 .section-light{
     overflow-x: hidden;
+    margin-top: 9.2rem;
 }
 
 
@@ -303,6 +305,7 @@ section {
     display: flex;
     align-items: center;
     gap: 1.875rem;
+    padding-top: 4px;
 }
 
 .steps-num::after {
@@ -318,7 +321,7 @@ section {
     font-size: 1.75rem;
     line-height: 160%;
     color: #292D33;
-    margin-top: 2.1875rem;
+    margin-top: 2.1rem;
     margin-bottom: .75rem;
 }
 
@@ -386,7 +389,7 @@ section {
 }
 
 .production {
-    margin-top: 6.8rem;
+    margin-top: 6.6rem;
 }
 
 .cards {
@@ -561,12 +564,12 @@ section {
 
 .clients {
     margin-bottom: 1.875rem;
-    margin-top: 9.4rem;
+    margin-top: 9.5rem;
 }
 
 .clients-wrapper {
     display: flex;
-    gap: 3.125rem;
+    gap: 1.1rem;
 }
 
 .clients-content {
@@ -586,7 +589,7 @@ section {
 .clients-list-item {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    gap: 1.34rem;
     font-weight: 400;
     font-size: 1rem;
     line-height: 160%;
@@ -602,15 +605,41 @@ section {
 }
 
 .clients-logo-item {
-    flex-basis: 33%;
+    flex-basis: 33.3%;
     border: 1px solid #EBEBF0;   
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2.4rem 5rem 3rem 3rem;
+    padding: 2.6rem 5.3rem 2.7rem 5.3rem;
     filter: grayscale(100%);
     transition: filter 0.5s;
 }
+
+.clients-logo-item:nth-child(1){
+    padding-left: 5.5rem;
+    padding-right: 5rem;
+}
+
+
+.clients-logo-item:nth-child(4),
+.clients-logo-item:nth-child(5),
+.clients-logo-item:nth-child(6) {
+    padding-top: 2.8rem;
+    padding-bottom: 3.2rem;
+}
+
+.clients-logo-item:nth-child(4) {
+    padding-right: 5rem;
+    padding-left: 5.3rem;
+} 
+
+
+.clients-logo-item:nth-child(7),
+.clients-logo-item:nth-child(8),
+.clients-logo-item:nth-child(9) {
+    padding-top: 2.4rem;
+}
+
 
 .clients-logo {
     max-width: 100%;
@@ -640,6 +669,7 @@ section {
     color: white;
     justify-content:flex-end;
     padding: 3.125rem;
+    padding-bottom: 3.375rem;
 }
 
 .blog-card::before {
@@ -738,17 +768,25 @@ section {
     gap: 1.875rem;
 }
 
+.input-group-vertical {
+    display: flex;
+    flex-direction: column;
+    max-width: 22.5rem;
+}
+
+
 .input-group {
     position: relative;
     height: 4.125rem;
     flex-grow: 1;
-    background: #F0F2F5;
+    background-color: #F0F2F5;
     width: 25.3125rem;
     
 }
 
 .input-group:nth-child(1) {
     width: 25.6rem;
+    
 }
 
 .input {
@@ -759,7 +797,7 @@ section {
     left: 0;
     padding: 1.25rem 1.875rem;
     border: 1px solid #E4E4EB;
-    background: transparent;
+    background-color: inherit;
 
 }
 
@@ -976,6 +1014,92 @@ section {
     align-items: center;
 }
 
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(41, 45, 51, 50%);
+    z-index: 10;
+    display: flex;
+
+}
+
+.modal.is-open {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal.is-open .modal-dilog{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.modal-dilog {
+    margin: auto;
+    max-width: 28.75rem;
+    padding: 2.5rem 3.125rem;
+    background: #fff;
+    position: relative;
+    opacity: 0;
+    transform: translateY(-20%);
+    transition: transform 0.5s, opacity 0.4s;;
+}
+
+.modal-close {
+    display: block;
+    position: absolute;
+    top: 2.5rem;
+    right: 3.125rem;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #EBEBF0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-title {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-size: 3rem;
+    line-height: 120%;
+    color: #292D33;
+}
+
+.modal-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 160%;
+    color: #828A99;
+    margin-bottom: 1.875rem;
+}
+
+.input-group-vertical .input-group {
+    width: 100%;
+}
+
+.modal-input-group {
+    background-color: #fff;
+}
+
+.modal-form-footer {
+    margin-top: 1.875rem;
+}
+
+.modal-form-btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
 
 @media (max-width: 1700px) {
     html {
@@ -1095,7 +1219,15 @@ section {
         flex-basis: 60%;
     }
 
-    .clients-logo-item {
+    .clients-logo-item:nth-child(1), 
+    .clients-logo-item:nth-child(2), 
+    .clients-logo-item:nth-child(3), 
+    .clients-logo-item:nth-child(4), 
+    .clients-logo-item:nth-child(5), 
+    .clients-logo-item:nth-child(6), 
+    .clients-logo-item:nth-child(7), 
+    .clients-logo-item:nth-child(8), 
+    .clients-logo-item:nth-child(9){
         padding: 1rem;
     }
 
@@ -1477,6 +1609,10 @@ section {
         margin-bottom: 2.4rem;
     }
 
+    .steps-num {
+        margin-top: -0.4rem;
+    }
+
     .steps-title {
         font-size: 1.67rem;
         margin-top: 1rem;
@@ -1508,7 +1644,7 @@ section {
     }
 
     .production {
-        margin-top: 8.3rem;
+        margin-top: 8.4rem;
     }
 
     .production .section-title,
@@ -1622,7 +1758,7 @@ section {
     .founder-text {
         font-size: 1.17rem;
         line-height: 157%;
-        margin-top: 0.9rem;
+        margin-top: 1.2rem;
         margin-bottom: 0;
     }
 
@@ -1632,6 +1768,7 @@ section {
 
     .founder-text2 {
         margin-bottom: 1.6rem;
+        margin-top: 0.7rem;
     }
     
     .founder-content .button-link {
@@ -1639,7 +1776,7 @@ section {
     }
 
     .clients {
-        margin-top: 7.9rem;
+        margin-top: 7.7rem;
     }
 
     .clients-list-item {
@@ -1875,6 +2012,11 @@ section {
 
     .footer-wrapper {
         gap: 0.7rem;
+    }
+
+    .footer-copyright {
+        margin-top: 1.3rem;
+        margin-bottom: 0.8rem;
     }
 }
 

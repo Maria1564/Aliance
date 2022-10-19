@@ -4,6 +4,8 @@ const logo = document.querySelector(".logo");
 const mMenuToggle = document.querySelector(".mobile-menu-toggle")
 const menu = document.querySelector(".mobile-menu")
 
+logo.style.display = "none"
+
 //Включает светлый режим меню
 const lightModeOn = (event)=>{
    navbar.classList.add("navbar-light"); //Добавляет класс под название navbar-light
@@ -112,3 +114,27 @@ const swiper = new Swiper('.features-slider', {
       }
     }
  });
+
+const modal = document.querySelector(".modal")
+const modalToggle = document.querySelectorAll("[data-toggle=modal]")
+const modalClose = document.querySelector(".modal-close")
+
+modalToggle.forEach((elem) => {
+  elem.addEventListener("click", (event)=>{
+    event.preventDefault();
+    modal.classList.add("is-open")
+  })
+})
+
+modalClose.addEventListener("click", (event)=>{
+  event.preventDefault();
+  modal.classList.remove("is-open")
+
+})  
+
+
+addEventListener("keypress", (event)=>{
+  if(event.key === 27) {
+    modal.classList.remove("is-open")
+  }
+})
