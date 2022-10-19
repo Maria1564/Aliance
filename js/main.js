@@ -132,9 +132,12 @@ modalClose.addEventListener("click", (event)=>{
 
 })  
 
+modal.addEventListener("click", ()=>{
+  modal.classList.remove("is-open")
+})
 
-addEventListener("keypress", (event)=>{
-  if(event.key === 27) {
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
     modal.classList.remove("is-open")
   }
 })
