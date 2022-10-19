@@ -132,8 +132,10 @@ modalClose.addEventListener("click", (event)=>{
 
 })  
 
-modal.addEventListener("click", ()=>{
-  modal.classList.remove("is-open")
+modal.addEventListener("click", (event)=>{
+  if(!event.target.closest(".modal-dialog")) {
+    modal.classList.remove("is-open")
+  }
 })
 
 document.addEventListener('keydown', (event) => {

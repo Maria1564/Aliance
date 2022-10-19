@@ -1035,12 +1035,12 @@ section {
     opacity: 1;
 }
 
-.modal.is-open .modal-dilog{
+.modal.is-open .modal-dialog{
     transform: translateY(0);
     opacity: 1;
 }
 
-.modal-dilog {
+.modal-dialog {
     margin: auto;
     max-width: 28.75rem;
     padding: 2.5rem 3.125rem;
@@ -1048,7 +1048,10 @@ section {
     position: relative;
     opacity: 0;
     transform: translateY(-20%);
-    transition: transform 0.5s, opacity 0.4s;;
+    transition: transform 0.5s, opacity 0.4s;
+    height: 39.0625rem;
+    padding-top: 2.4rem;
+    letter-spacing: 0.02rem;
 }
 
 .modal-close {
@@ -1081,6 +1084,7 @@ section {
     line-height: 160%;
     color: #828A99;
     margin-bottom: 1.875rem;
+    max-width: 22.1rem;
 }
 
 .input-group-vertical .input-group {
@@ -1099,6 +1103,12 @@ section {
     display: block;
     width: 100%;
     margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    padding: 1.3rem 3.75rem;
+}
+
+.modal-form-footer .notify-icon{
+    margin-top: .25rem;
 }
 
 @media (max-width: 1700px) {
