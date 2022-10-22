@@ -1026,7 +1026,7 @@ section {
     background-color: rgba(41, 45, 51, 50%);
     z-index: 10;
     display: flex;
-
+    overflow-y: auto;
 }
 
 .modal.is-open {
@@ -1052,6 +1052,7 @@ section {
     height: 39.0625rem;
     padding-top: 2.4rem;
     letter-spacing: 0.02rem;
+   
 }
 
 .modal-close {
