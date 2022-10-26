@@ -27,6 +27,16 @@ body {
     padding-top: 5.875rem;
 }
 
+.header-avto-him .avto-him{
+    display: block;
+}
+
+
+.avto-him{
+    display: none;
+    
+}
+
 .header-image {
     background-image: url(../img/header-bg.jpg);
     background-size: cover;
@@ -1125,6 +1135,90 @@ section {
     margin-top: .25rem;
 }
 
+.header-navbar-content{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    min-height: 16.875rem;
+   
+}
+
+.header-navbar {
+    background: #F0F2F5;
+    margin-top: 5.9rem;
+}
+
+
+.title-navbar {
+    margin-top: 1.6rem;
+    margin-bottom: 1.5625rem;
+    font-size: 5rem;
+}
+
+.about-content {
+    padding: 3.125rem 0;
+}
+
+.breadcrumbs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: .625rem;
+
+}
+
+.item-breadcrumbs {
+    display: flex;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: #828A99;
+    gap: .625rem;
+    align-items: center;
+}
+
+.item-breadcrumbs:not(:first-child)::before{
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 1px;
+    background: #828A99;
+    
+ 
+}
+
+.bg-avto-him {
+    background-image: url("../img/pexels-pixabay-208661\ 1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: -1;
+}
+
+.bg-avto-him::before {
+    content: "";
+    position: absolute;
+    background: rgba(41, 45, 51, 0.75);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}   
+
+.bg-avto-him li,
+.bg-avto-him h1,
+.bg-avto-him .item-breadcrumbs{
+    color:white;
+}
+
+.last-item {
+    color: #292D33;
+}
+
+
+
 @media (max-width: 1700px) {
     html {
         font-size: 14px;
@@ -2093,6 +2187,26 @@ section {
 
     .modal-form-footer .notify{
         gap: 0.77rem;
+    }
+
+    .title-navbar {
+        font-size: 4rem;
+        margin-top: 1.2rem;
+        margin-bottom: 2rem;
+    
+    }
+
+    li.item-breadcrumbs {
+        font-size: 0.999rem;
+        gap: 0.9rem;
+    }
+
+    .breadcrumbs {
+        gap: 0.9rem;
+    }
+
+    .item-breadcrumbs:not(:first-child)::before {
+        width: 11px;
     }
 }
 
