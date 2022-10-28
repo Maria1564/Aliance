@@ -1,4 +1,4 @@
-const navbar = document.querySelector(".navbar");
+const navbar = document.querySelector(".navbar");b
 const logoLight = document.querySelector(".logo-light"); 
 const logo = document.querySelector(".logo"); 
 const mMenuToggle = document.querySelector(".mobile-menu-toggle")
@@ -19,7 +19,6 @@ const lightModeOff = (event)=>{
 // Меняет высоту навигации
 const changeNavHeight = (height)=> {
   navbar.style.height = height
-  console.log(height, navbar.style.height)
 }
 
 //Функция открывания меню

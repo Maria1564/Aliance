@@ -115,10 +115,10 @@
       </a>
       <ul class="header-nav">
         <li class="header-nav-item">
-          <a href="/about.html" class="header-nav-link">О компании</a>
+          <a href="./about.php" class="header-nav-link">О компании</a>
         </li>
         <li class="header-nav-item">
-          <a href="./production.html" class="header-nav-link">Контрактное производство</a>
+          <a href="./production.php" class="header-nav-link">Контрактное производство</a>
         </li>
         <li class="header-nav-item">
           <a href="#" class="header-nav-link">Собственные торговые марки</a>
@@ -617,6 +617,9 @@
     </section>
     <!-- /.section blog -->
 
+<<<<<<< HEAD
+    <? include_once("footer.php")?>
+=======
     <section class="section calltoaction">
       <div class="bg-gray section-cta">
         <img src="./img/cta.png" alt="call to action" class="cta-image">
@@ -844,3 +847,4 @@
     <script src="./js/main.js?v=3.8"></script>
   </body>
 </html>
+>>>>>>> df7c95c53fed29d89433b0741999109e418c11eb
