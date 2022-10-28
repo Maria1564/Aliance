@@ -222,6 +222,6 @@
     </div>
 
     <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/main.js?v=3.9"></script>
+    <script src="./js/main.js?v=4.0"></script>
   </body>
 </html>

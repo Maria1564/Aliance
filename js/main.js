@@ -1,4 +1,4 @@
-const navbar = document.querySelector(".navbar");b
+const navbar = document.querySelector(".navbar");
 const logoLight = document.querySelector(".logo-light"); 
 const logo = document.querySelector(".logo"); 
 const mMenuToggle = document.querySelector(".mobile-menu-toggle")
