@@ -12,12 +12,12 @@
             </p>
             <div class="input-group-wrapper">
               <div class="input-group">
-                <input id="user-name" name="username" type="text" class="input" placeholder=" ">
+                <input id="user-name" name="username" type="text" class="input" placeholder=" " maxlength="100" required>
                 <label class="input-group-label" for="user-name">Имя</label>
               </div>
               <!-- /.input-group -->
               <div class="input-group">
-                <input id="user-phone" name="userphone" type="tel" class="input" placeholder=" ">
+                <input id="user-phone" name="userphone" type="tel" class="input" placeholder=" " maxlength="30" required>
                 <label class="input-group-label" for="user-phone">Номер телефона</label>
               </div>
               <!-- /.input-group -->
