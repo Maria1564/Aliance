@@ -191,22 +191,22 @@
           Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время ответит на 
           все интересующие вопросы и поможем даже в самых сложных случаях!
         </p>
-        <form action="#" class="modal-form">
+        <form action="./handler.php" method="POST" class="modal-form">
           <div class="input-group-wrapper input-group-vertical">
             <div class="input-group modal-input-group">
-              <input id="modal-user-name" type="text" class="input modal-input" placeholder=" ">
+              <input id="modal-user-name" type="text" class="input modal-input" placeholder=" " name="username">
               <label class="input-group-label modal-input-label" for="modal-user-name">Имя</label>
             </div>
             <!-- /.input-group -->
             <div class="input-group modal-input-group">
-              <input id="modal-user-phone" type="tel" class="input modal-input" placeholder=" ">
+              <input id="modal-user-phone" type="tel" class="input modal-input" placeholder=" " name="userphone">
               <label class="input-group-label modal-input-label" for="modal-user-phone">Номер телефона</label>
             </div>
             <!-- /.input-group -->
           </div>
            <!-- /.input-group-wrapper -->
           <div class="modal-form-footer">
-            <button type="submit" class="btn modal-form-btn">Отправить заявку</button>
+            <button type="submit" class="btn modal-form-btn btn-send">Отправить заявку</button>
             <div class="notify">
               <svg class="notify-icon" width="14" height="14">
                 <use href="./img/sprite.svg#shield"></use>
@@ -221,7 +221,26 @@
       </div>
     </div>
 
+    <div class="modal modal-thanks ">
+      <div class="modal-dialog modal-dialog-thanks">
+      <a href="#" class="modal-close" data-toggle="modal-thanks">
+          <svg class="close-icon" width="24" height="24">
+            <use href="./img/sprite.svg#close"></use>
+          </svg>
+        </a>
+        <img src="./img/thanks_illu.png" alt="thanks_illu"  width="360" height="308">
+        <h2 class="modal-title">Спасибо за заявку!</h2>
+        <p class="modal-text">
+        Наш менеджер свяжется с Вами в ближайшее время ответит на все интересующие вопросы и поможем 
+        даже в самых сложных случаях!
+        </p>
+        <button type="submit" class="btn modal-form-btn">Вернуться на главную</button>
+      </div>
+    </div>
+    
     <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/main.js?v=4.0"></script>
+    <script src="./js/just-validate.production.min.js"></script>
+    <script src="./js/inputmask.js"></script>
+    <script src="./js/main.js?v=4.2"></script>
   </body>
 </html>

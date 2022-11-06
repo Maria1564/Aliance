@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/style.css?v=9.8" />
+    <link rel="stylesheet" href="./css/style.css?v=9.9" />
     <title>Aliance Production</title>
   </head>
   <body class="front-page">

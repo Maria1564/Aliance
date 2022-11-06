@@ -5,7 +5,6 @@ const mMenuToggle = document.querySelector(".mobile-menu-toggle")
 const menu = document.querySelector(".mobile-menu")
 const isFront = document.body.classList.contains("front-page") //содержит ли body класс front-page
 
-
 //Включает светлый режим меню
 const lightModeOn = (event)=>{
    navbar.classList.add("navbar-light"); //Добавляет класс под название navbar-light
@@ -120,11 +119,15 @@ const swiper = new Swiper('.features-slider', {
 
 const modal = document.querySelector(".modal")
 const modalDilog = document.querySelector(".modal-dialog")
+const modalThanks = document.querySelector(".modal-thanks")
+const modalDilogThanks = document.querySelector(".modal-dialog-thanks")
+const btnSend = document.querySelector(".btn-send")
 
 document.addEventListener("click", (event)=>{
     if(event.target.dataset.toggle == "modal" || 
     event.target.parentNode.dataset.toggle == "modal" ||
-    !event.composedPath().includes(modalDilog) && modal.classList.contains("is-open")) {
+    !event.composedPath().includes(modalDilog) && modal.classList.contains("is-open") ) {
+      
       event.preventDefault();
       modal.classList.toggle("is-open")
       if(modal.classList.contains("is-open")){
@@ -136,9 +139,86 @@ document.addEventListener("click", (event)=>{
     }
 })
 
+
+// document.addEventListener("click", (event)=>{
+//   if(event.target.dataset.toggle == "modal-thanks" || 
+//     event.target.parentNode.dataset.toggle == "modal-thanks" ||
+//     !event.composedPath().includes(modalDilogThanks) && modalThanks.classList.contains("is-open")
+//     ){
+//       console.log(modalThanks.classList)
+//       event.preventDefault();
+//       modalThanks.classList.remove("is-open")
+    
+//       if(modalThanks.classList.contains("is_open2")){
+//         document.body.style.overflow = "hidden"
+//       }else{
+//         document.body.style.overflow = "auto"
+//       }
+      
+//     }
+// })
 document.addEventListener("keyup", (event)=>{
   if (event.key === 'Escape' && modal.classList.contains("is-open")) {
     modal.classList.toggle("is-open")
   }
 })
 
+btnSend.addEventListener("click", (event)=>{
+  event.preventDefault();
+  modal.classList.toggle("is-open")
+  modalThanks.classList.add("is-open2")
+  if(modalThanks.classList.contains("is-open2")){
+    document.body.style.overflow = "hidden"
+  }else{
+    document.body.style.overflow = "auto"
+  }
+})
+
+
+const forms = document.querySelectorAll("form"); 
+forms.forEach((form)=>{
+  let inputPhone = form.querySelector("[name=userphone]")
+  let inpMask = new Inputmask("+7 (999) 999-99-99")
+  inpMask.mask(inputPhone)
+  const validation = new JustValidate(form, {
+    errorFieldCssClass: 'is-invalid',
+  });
+  validation
+  .addField("[name = username]", [
+    {
+      rule: 'required', //поле обязательно для заполнения
+      errorMessage: 'Укажите имя',
+    },
+    {
+      rule: 'maxLength',
+      value: 30,
+      errorMessage: 'Максимально 30 символов ',
+    },
+  ])
+  .addField("[name = userphone]", [
+    {
+      rule: 'required',
+      errorMessage: 'Укажите номер телефона',
+    },
+  ])
+  .onSuccess((event) => {
+    const thisForm = event.target;  //наща форма
+    const formData = new FormData(thisForm) //данные из нашей формы
+
+    const ajaxSend = (formData) => {
+      fetch(thisForm.getAttribute("action"), {
+        method: thisForm.getAttribute("method"),
+        body: formData,
+      }).then((respons)=>{
+        if(respons.ok) {
+          thisForm.reset() //очистка формы
+          alert("Форма отправлена!")
+        }else { 
+          alert("Ошибка: ", respons.status.text)
+        }
+      })
+    } 
+
+    ajaxSend(formData)
+  });
+})
